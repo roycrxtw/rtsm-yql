@@ -65,8 +65,6 @@ function quickAccess(mid) {
  * @returns {undefined} void
  */
 function doSubmit(mid, jidA, jidB) {
-	//console.log("doSubmit(): mid=" + mid + ", junction from " + jidA + " to " + jidB);
-
 	// eg. http://1968.freeway.gov.tw/traffic/getsectraffic/fid/10050/from/15100/end/46500
 
 	var d = new Date();
