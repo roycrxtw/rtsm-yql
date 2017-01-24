@@ -75,7 +75,7 @@ function doSubmit(mid, jidA, jidB) {
 		setSpeedData(mid, xhr);
 	};
 	xhr.ontimeout = function () {
-		queryTimeoutHandler(xhr, mid, jidA, jidB);
+		queryTimeoutHandler(mid, jidA, jidB);
 	};
 	xhr.send();
 
@@ -221,7 +221,7 @@ function menuTimeoutHandler(mid) {
 	}
 }
 
-function queryTimeoutHandler(xhr, mid, jidA, jidB) {
+function queryTimeoutHandler(mid, jidA, jidB) {
 	queryRetries--;
 	if (queryRetries > 0) {
 		doSubmit(mid, jidA, jidB);
