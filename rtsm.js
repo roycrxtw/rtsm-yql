@@ -231,13 +231,12 @@ function queryTimeoutHandler(mid, jidA, jidB) {
 }
 
 
-// #roy-todo: Set motorway menu for TW an EN lang.
 /**
- * 
+ * #roy-todo: Set motorway menu for TW an EN lang.
  * @returns {undefined}
  */
 function setMotorwayMenu() {
-
+	//#roy-todo
 }
 
 
