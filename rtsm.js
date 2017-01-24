@@ -338,10 +338,6 @@ function setSpeedColor() {
 	});
 }
 
-function showSelectedOption(e) {
-	//console.log(e.target.options[e.target.selectedIndex].value);
-}
-
 // event listenters
 document.getElementById("shortcut-m3").addEventListener("click", function () {
 	quickAccess(10030);
