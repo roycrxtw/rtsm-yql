@@ -227,7 +227,17 @@ function setMotorwayMenu() {
 	//#roy-todo
 }
 
-
+/**
+ * Set up the speed data table in the main page.
+ * 
+ * This function will format the raw data into html layout.
+ * @param {string} argName Junction name
+ * @param {string} argSpeedA SpeedA, this direction will be set in
+ *	initSpeedDataTable().
+ * @param {string} argSpeedB SpeedB, this direction will be set in
+ *	initSpeedDataTable().
+ * @returns {undefined} void
+ */
 function printSpeedData(argName, argSpeedA, argSpeedB) {
 	var name = "<div class='d-name'>" + argName + "</div>";
 	var speedA = "<div class='d-speed' data-value='" + argSpeedA + "'>" + argSpeedA + "</div>";
