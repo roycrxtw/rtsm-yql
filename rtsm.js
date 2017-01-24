@@ -111,17 +111,11 @@ function setJunctionMenu(xhr, selectLast = false) {
 	var text = xhr.responseText;	// Get the response text and
 	var json = JSON.parse(text);	// parse it to JSON object.
 	
-	//var rows = eval( '(' + jsonResult + ')' );
+	// Get raw options from original data.
 	var rows = json.query.results.body.select.option;
-	// #roy-todo: 判斷rows是否為array
-	//console.log("Is rows an array? " + Array.isArray(rows));
 	var element = "";
 	var option = "";
 	if (Array.isArray(rows)) {
-		//console.log("rows.length=" + rows.length);
-		//console.log("row[0]=" + rows[1].content);
-		//console.log("row[1]=" + rows[1].value);
-
 		// create a select element
 		for (var i = 0; i < rows.length; i++) {
 			if (i === rows.length - 1 && selectLast === true) {
@@ -144,7 +138,7 @@ function setJunctionMenu(xhr, selectLast = false) {
 		document.getElementById("menu-junction-from").innerHTML = element;
 	} else {
 		document.getElementById("menu-junction-to").innerHTML = element;
-}
+	}
 }
 
 // Set junction menus(from and to) by a given motorwayId
