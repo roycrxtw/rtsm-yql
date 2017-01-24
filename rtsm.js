@@ -248,6 +248,15 @@ function printSpeedData(argName, argSpeedA, argSpeedB) {
 }
 
 
+/**
+ * Init the speed data table by motorway id(mid)
+ * 
+ * This function will search the motorways object and set the corresponding
+ * information to the table by the given mid.
+ * @param {string} mid Motorway ID.
+ * @param {string} time The time string created by the YQL return result.
+ * @returns {undefined} void
+ */
 function initSpeedDataTable(mid, time) {
 	var table = document.getElementById("speedDataTable");
 	table.innerHTML = "";
