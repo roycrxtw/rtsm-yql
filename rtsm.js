@@ -152,11 +152,7 @@ function setJunctionMenus(mid) {
 		var m = document.getElementById("menu-motorway");
 		mid = m.options[m.selectedIndex].value;
 	}
-
-	//console.log("setJunctionMenus.mid=" + mid);
-
-	// roy-todo:change method to a reusable method.
-	// like: setJunctionMenuA -> cbSetJunctionMenuA
+	
 	// Use XMLHttRequest to get junction menu from the Official site.
 	var query = "select * from html where url=\"" + SITE + "common/getnodsecs/fid/" + mid + "?id=from_selt\"";
 	var url = "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(query)
