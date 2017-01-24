@@ -102,9 +102,9 @@ function submit() {
 }
 
 /**
- * Set the menu of junction.
- * @param {type} xhr
- * @param {type} selectLast
+ * Set the menu of junctions by the data from official site.
+ * @param {Object} xhr A XMLHttpRequest Object
+ * @param {boolean} selectLast Ture if select the last item in default.
  * @returns {undefined}
  */
 function setJunctionMenu(xhr, selectLast = false) {
