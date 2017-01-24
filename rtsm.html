@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Roy Lu.">
+<title>高速公路速度路況查詢 Real-time Traffic Speed Monitor of Motorways in Taiwan</title>
+<link rel="stylesheet" type="text/css" href="rtsm.css">
+</head>
+
+<body>
+
+<div class="menu-container">
+
+<div class="block-container">
+
+<div class="app-title block">國道速度資訊RTSM</div>
+
+<div class="block block-motorway-label">選擇國道</div>
+<select id="menu-motorway" class="block block-motorway-menu" onchange="setJunctionMenus()">
+	<option value="10010">國道1號</option>
+	<option value="10019">國道1號高架段</option>
+	<option value="10020">國道2號</option>
+	<option value="10030">國道3號</option>
+	<option value="10031">國道3甲</option>
+	<option value="10038">港西聯外道路(台2己線)</option>
+	<option value="10039">南港聯絡道</option>
+	<option value="10040">國道4號</option>
+	<option value="10050">國道5號</option>
+	<option value="10060">國道6號</option>
+	<option value="10080">國道8號</option>
+	<option value="10100">國道10號</option>
+	<option value="20620">快速公路62號</option>
+	<option value="20640">快速公路64號</option>
+	<option value="20660">快速公路66號</option>
+	<option value="20680">快速公路68號</option>
+	<option value="20720">快速公路72號</option>
+	<option value="20740">快速公路74號</option>
+	<option value="20760">快速公路76號</option>
+	<option value="20780">快速公路78號</option>
+	<option value="20820">快速公路82號</option>
+	<option value="20840">快速公路84號</option>
+	<option value="20860">快速公路86號</option>
+	<option value="20880">快速公路88號</option>
+</select>
+
+
+<div class="block block-junction-from-label">區段起點</div>
+<select id="menu-junction-from" class="block block-junction-from-menu" onchange="showSelectedOption(event)">
+	<option>junction from</option>
+</select>
+
+<div class="block block-junction-to-label">區段終點</div>
+<select id="menu-junction-to" class="block block-junction-to-menu">
+	<option>junction to</option>
+</select>
+
+<div class="block block-submit" id="btn-search" onclick="submit()">Search</div>
+
+<div class="shortcut-container">
+<div class="shortcut-title">快速查詢</div>
+<div class="block-shortcut bg-pink" id="shortcut-m3">M3<br/>國道3號</div><div class="block-shortcut bg-orange" id="shortcut-m5">M5<br/>國道5號</div>
+</div>
+
+</div><!-- end of block-container -->
+
+
+<div class="demo-container">
+<div class="demo-header">圖例</div>
+<span class="speedConditionGood demo-block">速度良好</span><span class="speedConditionMedium demo-block">速度一般</span><span class="speedConditionBad demo-block">交通壅塞</span></div>
+
+</div><!-- end of menu-container-->
+
+
+<div id="speedDataTable"></div>
+
+
+
+
+<footer>
+<hr/>
+by Roy Lu, royvbtw@github 2017
+</footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="rtsm.js"></script>
+<noscript>This site use javascript. Please enable javascript.</noscript>
+
+</html>
