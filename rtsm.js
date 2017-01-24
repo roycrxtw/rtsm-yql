@@ -340,7 +340,7 @@ function showSelectedOption(e) {
 // event listenters
 
 document.getElementById("shortcut-m3").addEventListener("click", function () {
-	quickAccess(10030)
+	quickAccess(10030);
 });
 document.getElementById("shortcut-m5").addEventListener("click", function () {
 	quickAccess(10050);
