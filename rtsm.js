@@ -257,7 +257,7 @@ function initSpeedDataTable(mid, time) {
 
 	if (mid === undefined) {
 		console.error("setTableDirection(): mid is undefined.");
-		table = "<div>請重新查詢. Please re-submit.</div>";
+		table.innerHTML = "<div>請重新查詢. Please re-submit.</div>";
 		return;
 	}
 
