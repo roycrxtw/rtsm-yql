@@ -141,7 +141,12 @@ function setJunctionMenu(xhr, selectLast = false) {
 	}
 }
 
-// Set junction menus(from and to) by a given motorwayId
+
+/**
+ * Set junction menus(from and to) by a given motorway id(mid)
+ * @param {string} mid The motorway id, it's set by official site.
+ * @returns {undefined} void
+ */
 function setJunctionMenus(mid) {
 	if (!mid) {		// if not exist, use motorway id from menu.
 		var m = document.getElementById("menu-motorway");
