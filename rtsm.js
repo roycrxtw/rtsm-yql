@@ -149,7 +149,6 @@ function setJunctionMenu(xhr, selectLast = false) {
 	}
 }
 
-
 /**
  * Set junction menus(from and to) by a given motorway id(mid)
  * @param {string} mid The motorway id, it's set by official site.
@@ -218,7 +217,6 @@ function queryTimeoutHandler(mid, jidA, jidB) {
 	}
 }
 
-
 /**
  * #roy-todo: Set motorway menu for TW an EN lang.
  * @returns {undefined}
@@ -246,7 +244,6 @@ function printSpeedData(argName, argSpeedA, argSpeedB) {
 
 	document.getElementById("speedDataTable").innerHTML += row;
 }
-
 
 /**
  * Init the speed data table by motorway id(mid)
@@ -346,7 +343,6 @@ function showSelectedOption(e) {
 }
 
 // event listenters
-
 document.getElementById("shortcut-m3").addEventListener("click", function () {
 	quickAccess(10030);
 });
