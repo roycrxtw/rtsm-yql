@@ -142,13 +142,10 @@ function setJunctionMenu(xhr, selectLast = false) {
 }
 
 // Set junction menus(from and to) by a given motorwayId
-function setJunctionMenus(motorwayId) {
-	var mid;	// motorway id
-	if (motorwayId) {
-		mid = motorwayId;
-	} else {
+function setJunctionMenus(mid) {
+	if (!mid) {		// if not exist, use motorway id from menu.
 		var m = document.getElementById("menu-motorway");
-		var mid = m.options[m.selectedIndex].value;
+		mid = m.options[m.selectedIndex].value;
 	}
 
 	//console.log("setJunctionMenus.mid=" + mid);
