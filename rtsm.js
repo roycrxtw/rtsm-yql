@@ -108,21 +108,9 @@ function submit() {
  * @returns {undefined}
  */
 function setJunctionMenu(xhr, selectLast = false) {
-	//console.log("setJunctionMenu(), selectLast=" + selectLast);
-
-	var obj = xhr;		// 所以回傳的到底是甚麼東西
-	//console.log("obj=" + obj);		// 回傳的是一個XMLHttpRequest, 不是JSON/XML
-	//console.log("obj.query=" + obj.query);		// It will always be undefined since object is just a XMLHttpRequest, not a JSON obj.
-	var text = xhr.responseText;		// 從XMLHttpRequest轉成JSON
-	//console.log("setJunctionMenu(), textlength=" + text.length);
-	//console.log("setJunctionMenu(), resonseText=" + text);
-
-	var json = JSON.parse(text);
-
-	//console.log("json.query.created=" + json.query.created);
-	//console.log("json.query.created 2=" + jsonResult.query.created);	// error
-
-
+	var text = xhr.responseText;	// Get the response text and
+	var json = JSON.parse(text);	// parse it to JSON object.
+	
 	//var rows = eval( '(' + jsonResult + ')' );
 	var rows = json.query.results.body.select.option;
 	// #roy-todo: 判斷rows是否為array
