@@ -53,7 +53,17 @@ function quickAccess(mid) {
 	}
 }
 
-// Do the actual job that query data from server.
+/**
+ * Do the actual job that query data from the official site.
+ * This function will send a XMLHttpReqeust to the YQL service to query data
+ * from the official site. And the return data will be sent to a callback
+ * function setSpeedData() for further process.
+ * 
+ * @param {string} mid The motorway id
+ * @param {string} jidA The id of junction-from
+ * @param {string} jidB The id of junciton-to
+ * @returns {undefined} void
+ */
 function doSubmit(mid, jidA, jidB) {
 	//console.log("doSubmit(): mid=" + mid + ", junction from " + jidA + " to " + jidB);
 
