@@ -169,7 +169,7 @@ select{
 
 .menu-container{
 	width: 100%;
-	background-color: navy;
+	background-color: rgb(50, 50, 50);
 	padding: 20px;
 	margin: 0px auto;
 }
@@ -203,7 +203,7 @@ select{
 	width: 90px;
 	height: 90px;
 	
-	border: 5px solid navy;
+	border: 5px solid rgb(50, 50, 50);
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
@@ -368,7 +368,7 @@ select{
 	display: flex;
 	width: 180px;
 	height: 40px;
-	border: 5px solid navy;
+	border: 5px solid rgb(50, 50, 50);
 	background-color: darkorange;
 	align-items: center;
 	padding-left: 10px;
@@ -393,6 +393,21 @@ select{
 }
 
 /* ids */
+#btnRefresh{
+	display: flex;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	width: 70px;
+	height: 70px;
+	border: 1px solid gray;
+	background-color: rgb(50, 50, 30);
+	color: snow;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
 #speedDataTable{
 	display: table;
 	margin: 20px auto;
