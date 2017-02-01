@@ -5,6 +5,7 @@ const TIMEOUT = 3000;
 const SITE = "http://1968.freeway.gov.tw/";
 var retries = 4;
 var queryRetries = 4;
+var argCache = [];	// store query args
 
 var motorways = {
 	// mid, nameTw, nameEn, direction(0:N-S, 1:E-W)
@@ -67,6 +68,9 @@ function quickAccess(mid) {
 function doSubmit(mid, jidA, jidB) {
 	// eg. http://1968.freeway.gov.tw/traffic/getsectraffic/fid/10050/from/15100/end/46500
 
+	argCache[0] = mid;		// save arg to argCache
+	argCache[1] = jidA;
+	argCache[2] = jidB;
 	var d = new Date();
 	var rnd = "t" + d.getMonth() + d.getDay() + d.getHours() + d.getMinutes();
 	var targetUrl = SITE + "traffic/getsectraffic/fid/" + mid + "/from/" + jidA + "/end/" + jidB + "?r=" + rnd;
@@ -87,6 +91,17 @@ function doSubmit(mid, jidA, jidB) {
 	};
 	xhr.send();
 
+}
+
+/**
+ * Refresh page with previous query to YQL.
+ * The arguments of previous query are saved in argCache array.
+ * This function simply send the argCache array to doSubmit().
+ * 
+ * @returns {undefined} void
+ */
+function refreshPage(){
+	doSubmit(argCache[0], argCache[1], argCache[2]);
 }
 
 // Setup every args that doSumit needs.
@@ -339,6 +354,9 @@ function setSpeedColor() {
 }
 
 // event listenters
+document.getElementById("btnRefresh").addEventListener("click", function () {
+	refreshPage();
+});
 document.getElementById("shortcut-m3").addEventListener("click", function () {
 	quickAccess(10030);
 });
