@@ -5,7 +5,7 @@ const TIMEOUT = 3000;
 const SITE = "http://1968.freeway.gov.tw/";
 var retries = 4;
 var queryRetries = 4;
-var argCache = [];	// store query args
+var argCache = [-1, -1, -1];	// store query args
 
 var motorways = {
 	// mid, nameTw, nameEn, direction(0:N-S, 1:E-W)
@@ -101,7 +101,9 @@ function doSubmit(mid, jidA, jidB) {
  * @returns {undefined} void
  */
 function refreshPage(){
-	doSubmit(argCache[0], argCache[1], argCache[2]);
+	if(argCache[0] !== -1){
+		doSubmit(argCache[0], argCache[1], argCache[2]);
+	}
 }
 
 // Setup every args that doSumit needs.
