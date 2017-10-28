@@ -1,2 +1,8 @@
-# rtsm
-[Real-time Traffic Speed Monitor of Motorways in Taiwan, 高速公路速度路況查詢](https://royvbtw.github.io/rtsm/rtsm.html)
+# rtsm-yql
+This project is deprecated.
+
+The latest service is located at [RTSM](https://royvbtw.github.io/rtsm/rtsm.html).
+
+The implement of this project is based on [YQL](https://developer.yahoo.com/yql/).
+
+
